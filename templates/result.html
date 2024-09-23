@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Prediction Result</h1>
+        <div class="card mt-4">
+            <img src="{{ url_for('uploaded_file', filename=image_filename) }}" class="card-img-top" alt="Uploaded Image">
+            <div class="card-body text-center">
+                <h3 class="card-title">Predicted Class: {{ predicted_class }}</h3>
+                <a href="/" class="btn btn-primary mt-3">Upload Another Image</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
